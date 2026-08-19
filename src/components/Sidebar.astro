@@ -1,0 +1,31 @@
+---
+import { siteConfig } from '../site';
+const base = import.meta.env.BASE_URL;
+const path = Astro.url.pathname;
+const nav = [
+  ['首页', `${base}`],
+  ['文章', `${base}blog/`],
+  ['项目', `${base}projects/`],
+  ['标签', `${base}tags/`],
+  ['关于', `${base}about/`],
+  ['搜索', `${base}search/`]
+];
+---
+<aside class="sidebar">
+  <div class="brand-wrap">
+    <a class="brand" href={base}>{siteConfig.name}</a>
+    <p>{siteConfig.subtitle}</p>
+  </div>
+  <nav>
+    {nav.map(([label, href]) => (
+      <a class:list={{active: href === base ? path === base : path.startsWith(href)}} href={href}>{label}</a>
+    ))}
+  </nav>
+  <div class="side-bottom">
+    <div class="socials">
+      <a href={siteConfig.github} target="_blank" rel="noreferrer">GitHub</a>
+      <a href={siteConfig.scholar}>Scholar</a>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" aria-label="切换主题">◐</button>
+  </div>
+</aside>

@@ -1,0 +1,8 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const posts=await getCollection('blog',({data})=>!data.draft); const counts=new Map();
+for(const p of posts) for(const t of p.data.tags) counts.set(t,(counts.get(t)||0)+1);
+const tags=[...counts.entries()].sort((a,b)=>b[1]-a[1]);
+---
+<BaseLayout title="标签"><header class="page-title"><div class="eyebrow">Topics</div><h1>标签</h1><p>按照研究主题和技术方向浏览内容。</p></header><div class="chips">{tags.map(([tag,n])=><span class="chip" id={tag}>#{tag} · {n}</span>)}</div></BaseLayout>
