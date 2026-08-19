@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+const reports = (await getCollection('blog', ({ data }) => !data.draft && data.category === '周报'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+<BaseLayout title="周报" description="记录每周科研、开发与学习进展。">
+  <header class="page-title">
+    <div class="eyebrow">Weekly Reports</div>
+    <h1>周报</h1>
+    <p>记录每周完成的工作、遇到的问题、阶段性结果，以及下一周计划。</p>
+  </header>
+
+  {reports.length > 0 ? (
+    <div class="list">
+      {reports.map((report) => (
+        <a class="list-item" href={`${base}blog/${report.id}/`}>
+          <time>{report.data.pubDate.toLocaleDateString('zh-CN')}</time>
+          <div>
+            <h2>{report.data.title}</h2>
+            <p style="margin:.45rem 0 0;color:var(--muted);line-height:1.65">{report.data.description}</p>
+          </div>
+          <span class="cat">周报</span>
+        </a>
+      ))}
+    </div>
+  ) : (
+    <div class="card">
+      <h2 style="margin-top:0">还没有周报</h2>
+      <p style="color:var(--muted);line-height:1.8">在 <code>src/content/blog/</code> 新建 Markdown，并把 <code>category</code> 设置为 <code>周报</code>，发布后会自动显示在这里。</p>
+    </div>
+  )}
+</BaseLayout>
