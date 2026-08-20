@@ -14,7 +14,7 @@ const nav = [
 <aside class="sidebar">
   <div class="brand-wrap">
     <div class="brand-row">
-      <img class="avatar" src={`${base}images/avatar-fixed.svg`} alt={`${siteConfig.name} 的头像`} width="48" height="48" />
+      <img class="avatar" src={`${base}images/avatar.jpg`} alt={`${siteConfig.name} 的头像`} />
       <a class="brand" href={base}>{siteConfig.name}</a>
     </div>
     <p>{siteConfig.subtitle}</p>
@@ -47,8 +47,9 @@ const nav = [
     display: block;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center;
     border: 1px solid var(--line);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .16);
   }
 
   @media (max-width: 820px) {
