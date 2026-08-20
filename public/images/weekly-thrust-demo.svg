@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">推力曲线预测示例</title>
+  <desc id="desc">真实值与预测值的示例推力曲线。</desc>
+  <rect width="1200" height="620" rx="28" fill="#f7f7f3"/>
+  <text x="70" y="72" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#1c2023">Thrust Curve · Prediction Demo</text>
+  <text x="70" y="108" font-family="Arial, sans-serif" font-size="17" fill="#73797d">示例数据，仅用于演示 HTML 周报中的图片排版</text>
+
+  <line x1="100" y1="510" x2="1110" y2="510" stroke="#aeb3b5" stroke-width="2"/>
+  <line x1="100" y1="150" x2="100" y2="510" stroke="#aeb3b5" stroke-width="2"/>
+
+  <g stroke="#d9dcda" stroke-width="1">
+    <line x1="100" y1="420" x2="1110" y2="420"/>
+    <line x1="100" y1="330" x2="1110" y2="330"/>
+    <line x1="100" y1="240" x2="1110" y2="240"/>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-size="15" fill="#777d80">
+    <text x="70" y="515">0</text>
+    <text x="55" y="425">25</text>
+    <text x="55" y="335">50</text>
+    <text x="55" y="245">75</text>
+    <text x="45" y="155">100</text>
+    <text x="96" y="545">0</text>
+    <text x="335" y="545">2</text>
+    <text x="585" y="545">4</text>
+    <text x="835" y="545">6</text>
+    <text x="1080" y="545">8 s</text>
+  </g>
+
+  <polyline points="100,510 155,500 205,470 255,395 310,290 365,225 430,205 500,215 565,222 635,220 705,225 770,240 830,275 890,330 945,405 995,465 1050,495 1110,510"
+    fill="none" stroke="#15191c" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="100,510 155,503 205,478 255,410 310,302 365,235 430,216 500,220 565,228 635,225 705,232 770,248 830,286 890,342 945,414 995,470 1050,498 1110,510"
+    fill="none" stroke="#8b9296" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="14 10"/>
+
+  <circle cx="430" cy="205" r="7" fill="#15191c"/>
+  <text x="445" y="193" font-family="Arial, sans-serif" font-size="16" fill="#34393c">Peak thrust ≈ 84 kN</text>
+
+  <g font-family="Arial, sans-serif" font-size="16">
+    <line x1="820" y1="100" x2="865" y2="100" stroke="#15191c" stroke-width="7" stroke-linecap="round"/>
+    <text x="878" y="106" fill="#34393c">Test</text>
+    <line x1="955" y1="100" x2="1000" y2="100" stroke="#8b9296" stroke-width="5" stroke-dasharray="12 8" stroke-linecap="round"/>
+    <text x="1013" y="106" fill="#34393c">Prediction</text>
+  </g>
+
+  <text x="520" y="590" font-family="Arial, sans-serif" font-size="17" fill="#6f7578">Time</text>
+  <text x="20" y="350" transform="rotate(-90 20 350)" font-family="Arial, sans-serif" font-size="17" fill="#6f7578">Thrust (kN)</text>
+</svg>
