@@ -36,12 +36,12 @@ featured: false
 
 ## 03 · 推力曲线结果
 
-![推力曲线预测示例](../../images/weekly-thrust-demo.svg)
+![推力曲线预测示例](/0111/images/weekly-thrust-demo.svg)
 
 **图片写法：**
 
 ```md
-![推力曲线预测示例](../../images/weekly-thrust-demo.svg)
+![推力曲线预测示例](/0111/images/weekly-thrust-demo.svg)
 ```
 
 你自己的图片可以放进 `public/images/`，例如：
@@ -53,10 +53,10 @@ public/images/week34-thrust.png
 然后 Markdown 写：
 
 ```md
-![第34周推力曲线](../../images/week34-thrust.png)
+![第34周推力曲线](/0111/images/week34-thrust.png)
 ```
 
-这种相对路径在 `localhost` 和 GitHub Pages 都能用。
+`public/` 目录中的文件会原样发布。由于当前 GitHub Pages 项目地址包含 `/0111/`，公开图片路径也使用 `/0111/images/...`。
 
 ---
 
@@ -76,7 +76,7 @@ public/images/week34-thrust.png
 
 <div class="two-col">
   <div>
-    <img src="../../images/weekly-thrust-demo.svg" alt="推力曲线示例" />
+    <img src="/0111/images/weekly-thrust-demo.svg" alt="推力曲线示例" />
   </div>
   <div>
     <h3>阶段结论</h3>
