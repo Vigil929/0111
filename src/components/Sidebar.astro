@@ -2,6 +2,7 @@
 import { siteConfig } from '../site';
 const base = import.meta.env.BASE_URL;
 const path = Astro.url.pathname;
+const avatarSrc = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA4KCw0LCQ4NDA0QDw4RFiQXFhQUFiwgIRokNC43NjMuMjI6QVNGOj1OPjIySGJJTlZYXV5dOEVmbWVabFNbXVn/2wBDAQ8QEBYTFioXFypZOzI7WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVn/wAARCABgAGADASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAwQCBQYBAP/EADEQAAEEAQIFAwMBCQEAAAAAAAEAAgMRBBIhBRMxQVEiYXEygZEVBiNCQ5KhorHB8P/EABgBAAMBAQAAAAAAAAAAAAAAAAABAgME/8QAHxEBAQEAAQMFAAAAAAAAAAAAAAERAgMhMRITQXGh/9oADAMBAAIRAxEAPwCOWwtyXEj6t1AFWHGIqpwH8SrmtJ6Bc63TIW7jqu/qeQzppK4WUN0rKPCCOP45k6DywGlosklByMriTomyyZEhjPdpoD8JRkRe/TqawO2LndlJxkja6FkmqJ25Hax0IXXOHT9r1b3+/wAxlZ1Ld4+HY8nIBsTy/wBRTjOIZjK05En3NqrDHNcSG7k3qvt4RozK6xRNbHb28+ei5K1xafrGbQuX/EIUnFMp4oyD7NCTcZAw7UQCdwf/AHtS8WkhIY8ZCSSTZKg6VRc0jqEN2yFNjxiL0fBCrY2gBWHGJjLlGGPo36ilgwNbSZE5mGro1dWlHM33V2yXGbE1srWk3vqaSN3N/wCAqLcfCnZzdLWMsNdUmnT9RPXqaDdkYSkLQAo6VbSYEDY9ZleGtYXlwo6xpBto+TW6G/AiGU+NszmtZDzHF7e9A1t8hGGrtFo8Ta7Jv9OmZq3jOm9XrFNIqwb77hTbgz6XkxkFgBLep3vx8JUFeWDuvaQi8s6dW9eVDT7rPTBljBCRnYNJKfmY4Eg2COxCTnBDaVShoABZN7k2T5UJXhoQHZBY23BIy5tvtxoHoFRHdPM3XeR6KJ28L2E8Pb8puRo0qLQrDCzUp/vGHU2V1lunr28fCk4eoqTYweqNCL8nIeCHykgijsPIP5sDf2TkGW/W6QxxtLnazpBFmiL/AL2lZOTCzU9V0nHIWu0xRPePJNBG2+A0UGSyKBsegiiCT13BvovR5EQlmJ2a+RjvU3VsDZ+6ooOLxyGnRuYT3u00ydj+iVtg7C5LubK+Q/U4kpOVg7hM2EGUgpQxMwBrXfBWdcTr3O60OXcjdt1UyYpJvSbWupO8OkpoJVxeqO1Q4sD4t3Egno3wrdjjyaUUwXEB5tcfMGhDkfRKr8uYtY432SAPEsoyvLAfT3SFClBry42SiCnGlpOyBIvqFKzg1NFoGLjVvVuKsQwMaB3UWrkAlyzELLXEewSjuJtc6uW/52T742vBsbJSTDjLSWdfCJgWtECyoggG0TMlbGdDRbu/shxxvlhNnSD3TAQcZHo5dpZS9HAIhaWmnbuLUgKeXqkXESnSdwV2aQONBdhj7oBrHxsbSNUTPwjmPEjNx40Zd5IS4NBEaC4+UjT9Th2b7MFIjIO+681vui76dkAM6Wj1KLWxF16QuSYMs/8AMofCPg8Fl5rfWSPhMmhzOA81z5WOaT1Daq0m2IABtdFZZ3F2Ru5cRtx21KubMCb/ANrTlnwUckxg5ppZTiUDoZiQCbPRbSNwkGyi7FBfroX5pQbI43Bcl7BJORHe+nv90eXFjjbpOQWezButQYQRRS0mJ1LGiypNnYsSIusGU+7nFW/D8UNG4Ne6MMZ4NuApedmQY40l7SfAKAZcI2jZjfwEFzrPZKP4ky6Ar5QnZ9/TGPuVWEt8bHdKfS21cRQnHidp9ZqwOllJfs7IJcF7q9Ws2rY9FpOOFr//2Q==';
 const nav = [
   ['首页', `${base}`],
   ['文章', `${base}blog/`],
@@ -14,7 +15,7 @@ const nav = [
 <aside class="sidebar">
   <div class="brand-wrap">
     <div class="brand-row">
-      <img class="avatar" src={`${base}images/avatar-cat.jpg?v=2`} alt={`${siteConfig.name} 的头像`} />
+      <img class="avatar" src={avatarSrc} alt={`${siteConfig.name} 的头像`} />
       <a class="brand" href={base}>{siteConfig.name}</a>
     </div>
     <p>{siteConfig.subtitle}</p>
