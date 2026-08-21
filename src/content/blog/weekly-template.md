@@ -1,7 +1,7 @@
 ---
-title: "第 01 周周报"
+title: "第 02-01 周周报"
 description: "记录本周科研、开发与学习进展。"
-pubDate: 2026-08-19
+pubDate: 2026-08-23
 category: "周报"
 tags: ["周报"]
 draft: true
