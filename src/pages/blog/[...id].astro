@@ -14,6 +14,20 @@ const dateFmt = new Intl.DateTimeFormat('zh-CN',{year:'numeric',month:'long',day
     <header class="article-head"><div class="eyebrow">{post.data.category}</div><h1>{post.data.title}</h1><div class="meta"><time>{dateFmt.format(post.data.pubDate)}</time></div></header>
     {headings.length > 1 && <div class="note" style="margin-top:26px"><strong>文章目录</strong><br/>{headings.filter(h=>h.depth<=3).map(h=><a style="display:block;margin-top:7px" href={`#${h.slug}`}>{'—'.repeat(Math.max(0,h.depth-2))} {h.text}</a>)}</div>}
     <article><Content /></article>
-    <section style="margin-top:48px"><div class="section-head"><h2>评论</h2></div><div class="note">评论组件已预留。按照 README 配置 Giscus 后，这里即可显示 GitHub Discussions 评论。</div></section>
+    <script src="https://giscus.app/client.js"
+        data-repo="Vigil929/0111"
+        data-repo-id="R_kgDOT9W5Zw"
+        data-category="Comments"
+        data-category-id="DIC_kwDOT9W5Z84DD8L6"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+    </script>
   </div>
 </BaseLayout>
